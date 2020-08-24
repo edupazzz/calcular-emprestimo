@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="./styles/global-styles.css"/>
+
+        <script src="./javascript/functions.js"></script>
+
+    <title>Calcular Empréstimo</title>
+</head>
+<body> 
+    <!-- ESTUDOS DO LIVRO: "JavaScript: O guia definitivo. By David Flanagan." 
+        Esta é uma tabela HTML com elões como "interest" e "yars".
+        Essas identificações são usadasementos <input> que permitem ao usuário
+        inserir dados e elementos <span> nos quais o programa pode exibir seus resultados.
+        Esses elementos tem identificaç no código JavaScript que vem após a tabela. -->
+    
+        <table>
+            <tr>
+                <th>Insira os dados do Empréstimo:</th>
+                <td></td>
+                <th>Saldo do Empréstimo, Patrimônio Acumulado e Pagamento de Juros</th>
+            </tr>
+
+            <tr>
+                <td>Valor do Empréstimo (R$):</td>
+                <td><input id="amount" onchange="calculate();"></td>
+                <td rowspan=8>
+                    <canvas id="graph" width="400" height="250"></canvas></td>
+            </tr>
+
+            <tr>
+                <td>Juros Anuais (%):</td>
+                <td><input id="apr" onchange="calculate();"></td>
+            </tr>
+                
+            <tr>
+                <td>Duração da dívida (Em Anos):</td>
+                <td><input id="years" onchange="calculate();"/></td>
+            </tr>               
+            
+            <tr>
+                <td>CEP (Para encontrar Credores)</td>
+                <td><input id="zipcode" onchange="calculate();"/></td>
+            </tr>
+
+            <tr>
+                <th>Estimar Pagamentos</th>
+                <td><button onclick="calculate();">Calcular</button></td>
+            </tr>
+
+            <tr>
+                <td>Pagamento Mensal</td>
+                <td>R$<span class="output" id="payment"></span></td>
+            </tr>
+
+            <tr>
+                <td>Total a Pagar</td>
+                <td>R$<span class="output" id="total"></span></td>
+            </tr>
+
+            <tr>
+                <td>Juros total</td>
+                <td>R$<span class="output" id="totalinterest"></span></td>
+            </tr>
+
+            <tr>
+                <th>Criador: Eduardo Paz</th>
+                <td colspan=2>Algum texto aqui, depois eu coloco!.. hehehe
+                    links: 
+                    <div id="lenders"></div>
+                </td>
+            </tr>
+        </table>
+</body>
+</html>

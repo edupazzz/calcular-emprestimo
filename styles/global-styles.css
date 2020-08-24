@@ -1,0 +1,29 @@
+
+
+/*Folha de estilos global, que configura os princípais estilos do programa.*/
+
+body {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+.output {
+    font-weight: bold; /*Textos em negrito;*/
+}
+
+#payment {
+    text-decoration: underline;
+}
+
+#graph {
+    width: 400px;
+    height: 250px;
+
+    margin-left: 45px;
+
+    border: solid rgb(0, 110, 6) 1px; /*borda do gráfico;*/
+}
+
+th, td {
+    vertical-align: top;
+}
